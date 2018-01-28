@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ChatEngine Embed Final App W/ Demo Keys</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <html>
+<title>PubNub ChatEngine</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chat-engine@0.8.4/dist/chat-engine.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="people-list" id="people-list">
+            <ul class="list">
+            </ul>
+        </div>
+        <div class="chat">
+            <div class="chat-header clearfix">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+                <div class="chat-about">
+                    <div class="chat-with">ChatEngine Demo Chat</div>
+                </div>
+            </div>
+            <div class="chat-history">
+                <ul></ul>
+            </div>
+            <form id="sendMessage" class="chat-message clearfix">
+                <div id="output"></div>
+                <input type="text" name="message-to-send" id="message-to-send" placeholder="Type your message" rows="1"></input>
+                <input type="submit" value="Send"></input>
+                <input type="hidden" role="uploadcare-uploader" data-crop="disabled" data-images-only="true" />                
+            </form>
+            <!-- end chat-message -->
+        </div>
+        <!-- end chat -->
+    </div>
+    <!-- end container -->
+    
+    <script id="message-template" type="text/x-handlebars-template">
+        <li class="clearfix">
+            <div class="message-data align-right">
+                <span class="message-data-time">{{time}}, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name">{{user.first}}</span> <i class="fa fa-circle me"></i>
+            </div>
+            <div class="message other-message float-right">
+                {{{messageOutput}}}
+            </div>
+        </li>
+    </script>
+    <script id="message-response-template" type="text/x-handlebars-template">
+        <li>
+            <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> {{user.first}}</span>
+                <span class="message-data-time">{{time}}, Today</span>
+            </div>
+            <div class="message my-message">
+                {{messageOutput}}
+            </div>
+        </li>
+    </script>
+    <script id="person-template" type="text/x-handlebars-template">
+        {{#if state.full}}
+        <li class="clearfix" id="{{uuid}}">
+            <img src="{{state.avatar}}" alt="avatar" />
+            <div class="about">
+                <div class="name">{{state.full}}</div>
+                <div class="status">
+                    <i class="fa fa-circle online"></i> online
+                </div>
+            </div>
+        </li>
+        {{/if}}
+    </script>
+  
+</body>
+
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
+<script src='https://dogaan.github.io/chat-engine.js'></script>
+<script src='https://dogaan.github.io/generateperson.js'></script>
+<script src="node_modules/chat-engine-uploadcare/dist/chat-engine-uploadcare.js" type="text/javascript"></script>
+<script charset="utf-8" src="https://ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js"></script>
+
+<script  src="js/index.js"></script>
+
+</body>
+</html>

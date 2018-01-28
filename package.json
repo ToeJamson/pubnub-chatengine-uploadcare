@@ -1,0 +1,19 @@
+{
+  "name": "pn-chatengine",
+  "version": "1.0.0",
+  "description": "A Pen created at CodePen.io. You can find this one at https://codepen.io/anmolonruby/pen/dZQGrZ.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/anmol1771/pubnub-chat-engine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/anmol1771/pubnub-chat-engine#readme",
+  "dependencies": {
+    "chat-engine-uploadcare": "0.0.8"
+  }
+}
